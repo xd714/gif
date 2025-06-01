@@ -2,22 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Your Name - Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xi DING - Computational Animal Breeding & Genetics</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Xi DING</h1>
-    <p>PhD in Computational Animal breeding and genetics, Researcher in body weight</p>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="cv.html">CV</a>
-    </nav>
-  </header>
-  <main>
-    <h2>Welcome</h2>
-    <p>This is my personal website. I am currently a PhD student at FBN working on Computational Animal breeding and genetics.</p>
-  </main>
+  <div class="container">
+    <header>
+      <div class="profile-section">
+        <div class="profile-image">XD</div>
+        <div class="profile-info">
+          <h1>Xi DING</h1>
+          <div class="title">PhD in Computational Animal Breeding & Genetics</div>
+          <div class="institution">Leibniz Institute for Farm Animal Biology (FBN), Germany</div>
+        </div>
+      </div>
+      
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="section">
+        <h2>Welcome</h2>
+        <p>I am a PhD researcher specializing in computational animal breeding and genetics, with a particular focus on body weight prediction and optimization. My work combines advanced statistical modeling, machine learning techniques, and genomic analysis to improve livestock breeding programs.</p>
+        <p>Currently based at the Leibniz Institute for Farm Animal Biology (FBN) in Germany, I am passionate about applying computational methods to solve real-world challenges in animal agriculture and sustainable food production.</p>
+      </section>
+
+      <section id="research" class="section">
+        <h2>Research Areas</h2>
+        <div class="research-areas">
+          <div class="research-card">
+            <h3>🧬 Genomic Selection</h3>
+            <p>Developing predictive models for breeding value estimation using genomic data and advanced statistical methods.</p>
+          </div>
+          <div class="research-card">
+            <h3>⚖️ Body Weight Prediction</h3>
+            <p>Creating computational models to predict and optimize animal growth patterns and body weight trajectories.</p>
+          </div>
+          <div class="research-card">
+            <h3>🤖 Machine Learning</h3>
+            <p>Applying ML algorithms to large-scale genomic and phenotypic datasets for improved breeding decisions.</p>
+          </div>
+          <div class="research-card">
+            <h3>📊 Statistical Genetics</h3>
+            <p>Developing novel statistical approaches for quantitative trait analysis and genetic parameter estimation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Contact Information</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="icon">📧</div>
+            <div>Email</div>
+            <div>xi.ding@fbn-dummerstorf.de</div>
+          </div>
+          <div class="contact-item">
+            <div class="icon">🏢</div>
+            <div>Institution</div>
+            <div>Leibniz Institute for Farm Animal Biology</div>
+          </div>
+          <div class="contact-item">
+            <div class="icon">📍</div>
+            <div>Location</div>
+            <div>Dummerstorf, Germany</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Xi DING. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>

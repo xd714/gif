@@ -2,20 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CV - Your Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Xi DING</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>My CV</h1>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="cv.html">CV</a>
-    </nav>
-  </header>
-  <main>
-    <p>You can download my CV <a href="Your_CV_File.pdf" target="_blank">here</a>.</p>
-  </main>
+  <div class="container">
+    <header>
+      <div class="profile-section">
+        <div class="profile-image">XD</div>
+        <div class="profile-info">
+          <h1>My CV</h1>
+          <div class="institution">Curriculum Vitae</div>
+        </div>
+      </div>
+      
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="cv.html" class="active">CV</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <h2>Education</h2>
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: #667eea; margin-bottom: 0.5rem;">PhD in Computational Animal Breeding and Genetics</h3>
+          <p style="font-weight: 500; color: #2c3e50;">Leibniz Institute for Farm Animal Biology (FBN), Germany</p>
+          <p style="color: #666;">Current • Focus: Body weight models, data collinearity and genomics</p>
+        </div>
+        
+        <!-- Add your previous education here -->
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: #667eea; margin-bottom: 0.5rem;">Master's Degree</h3>
+          <p style="font-weight: 500; color: #2c3e50;">[Universität Rostock]</p>
+          <p style="color: #666;">[2019] • [Computational Animal Science]</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Research Experience</h2>
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: #667eea; margin-bottom: 0.5rem;">PhD Researcher</h3>
+          <p style="font-weight: 500; color: #2c3e50;">Leibniz Institute for Farm Animal Biology (FBN)</p>
+          <p style="color: #666;">[March, 2022] - Present</p>
+          <ul style="margin-top: 1rem; color: #555;">
+            <li>Developed computational models for body weight in mice</li>
+            <li>Applied machine learning techniques in genomics</li>
+            <li>Collaborated on interdisciplinary research projects</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Publications</h2>
+        <p style="color: #555; margin-bottom: 2rem;">Selected publications and research contributions:</p>
+        
+        <!-- Add your publications here -->
+        <div style="margin-bottom: 1.5rem; padding: 1rem; background: white; border-radius: 5px;">
+          <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">[On the Identifiability of Genetic Parameters for Growth in Mice With a Massively Deep Pedigree]</h4>
+          <p style="color: #666; font-size: 0.95rem;">[Xi Ding, A. A. Musa, Norbert Reinsch], [Animal breeding and genetics], [2025]</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Skills & Competencies</h2>
+        <div class="skills-grid">
+          <div class="skill-tag">R Programming</div>
+          <div class="skill-tag">Python</div>
+          <div class="skill-tag">Statistical Analysis</div>
+          <div class="skill-tag">Machine Learning</div>
+          <div class="skill-tag">Genomic Data Analysis</div>
+          <div class="skill-tag">BLUP/GBLUP Methods</div>
+          <div class="skill-tag">Data Visualization</div>
+          <div class="skill-tag">Scientific Writing</div>
+        </div>
+      </section>
+
+      <section class="section" style="text-align: center;">
+        <h2>Download CV</h2>
+        <p>For a complete version of my curriculum vitae:</p>
+        <a href="Your_CV_File.pdf" target="_blank" class="btn">Download PDF CV</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Xi DING. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
