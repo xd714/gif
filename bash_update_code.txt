@@ -1,0 +1,8 @@
+# Add all updated files
+git add .
+
+# Commit the changes
+git commit -m "Update website with actual publication and consistent content"
+
+# Push to GitHub
+git push origin main
