@@ -45,7 +45,7 @@ header {
   background-image: url('profile.jpg');
   
   /* Normal state: Show complete face - no cropping */
-  background-size: cover;
+  background-size: 90%;
   background-position: center center;
   
   border: 3px solid #667eea;
@@ -108,7 +108,7 @@ header {
   transform: scale(1.15) rotate(3deg);
   
   /* Hover state: Keep showing full face but with enhanced zoom */
-  background-size: 110%;
+  background-size: 100%;
   background-position: center center;
   
   /* Enhanced glow effects */
