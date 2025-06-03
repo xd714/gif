@@ -36,7 +36,7 @@ header {
 
 
 
-/* Replace your .profile-image CSS with this left-side body focus version: */
+/* Replace your .profile-image CSS with this updated version: */
 
 .profile-image {
   width: 120px;
@@ -44,9 +44,9 @@ header {
   border-radius: 50%;
   background-image: url('profile.jpg');
   
-  /* Normal state: Focus on left side of body, opposite from victory sign */
-  background-size: 120%;
-  background-position: 65% 50%;
+  /* Normal state: Show complete face - no cropping */
+  background-size: cover;
+  background-position: center center;
   
   border: 3px solid #667eea;
   flex-shrink: 0;
@@ -103,12 +103,12 @@ header {
   opacity: 0;
 }
 
-/* HOVER STATE: Show full photo with enhanced effects */
+/* HOVER STATE: Enhanced effects with dramatic transformation */
 .profile-image:hover {
   transform: scale(1.15) rotate(3deg);
   
-  /* Hover state: Zoom out to show full photo including victory sign */
-  background-size: cover;
+  /* Hover state: Keep showing full face but with enhanced zoom */
+  background-size: 110%;
   background-position: center center;
   
   /* Enhanced glow effects */
@@ -167,35 +167,35 @@ header {
   }
 }
 
-/* Fine-tuning options for different body focus areas: */
+/* Alternative options if you want to fine-tune the positioning: */
 
-/* Option A: More focus on lower body */
+/* Option A: If you want to focus slightly more on upper face */
 /*
 .profile-image {
-  background-position: 65% 55%;
+  background-position: center 40%;
+}
+.profile-image:hover {
+  background-position: center 40%;
 }
 */
 
-/* Option B: Even more left side focus */
+/* Option B: If you want to focus slightly more on lower face */
 /*
 .profile-image {
-  background-position: 70% 40%;
+  background-position: center 60%;
+}
+.profile-image:hover {
+  background-position: center 60%;
 }
 */
 
-/* Option C: Less zoom, more body visible */
+/* Option C: If the image is still slightly cropped, use this to show more */
 /*
 .profile-image {
-  background-size: 120%;
-  background-position: 65% 50%;
+  background-size: 90%;
 }
-*/
-
-/* Option D: More zoom, focus on specific area */
-/*
-.profile-image {
-  background-size: 140%;
-  background-position: 60% 40%;
+.profile-image:hover {
+  background-size: 100%;
 }
 */
 
