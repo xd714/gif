@@ -36,58 +36,37 @@ header {
 
 
 
-/* Enhanced Profile Image Styles */
+
+/* Replace your .profile-image CSS with this updated version: */
+
 .profile-image {
-  width: 160px;  /* Slightly smaller but still larger than original 120px */
-  height: 160px; 
-  
-  /* More subtle irregular shape - still elegant but not too dramatic */
-  border-radius: 48% 52% 55% 45% / 50% 48% 52% 50%;
-  
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
   background-image: url('profile.jpg');
   background-repeat: no-repeat;
   
-  /* Better positioning for face framing */
-  background-size: 180%;
+  /* Normal state: Focus on face - zoomed in and positioned to show face clearly */
+  background-size: 160%;
   background-position: center 30%;
   
-  /* Cleaner border with single color but enhanced shadow */
   border: 3px solid #667eea;
   flex-shrink: 0;
   
-  /* More refined shadow effects */
+  /* Enhanced visual effects */
   box-shadow: 
     0 0 30px rgba(102, 126, 234, 0.3),
-    0 0 60px rgba(102, 126, 234, 0.15),
+    0 0 60px rgba(102, 126, 234, 0.1),
     inset 0 2px 0 rgba(255, 255, 255, 0.1),
-    0 8px 25px rgba(0, 0, 0, 0.12);
+    0 8px 25px rgba(0, 0, 0, 0.1);
   
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  
-  /* Very subtle rotation */
-  transform: rotate(-1deg);
 }
 
-/* Animated gradient border overlay */
+/* Multiple shimmer layers for shine effects */
 .profile-image::before {
-  content: '';
-  position: absolute;
-  top: -6px;
-  left: -6px;
-  right: -6px;
-  bottom: -6px;
-  background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c, #667eea);
-  background-size: 400% 400%;
-  border-radius: 45% 55% 60% 40% / 50% 45% 55% 50%;
-  z-index: -1;
-  animation: gradient-rotate 4s ease-in-out infinite;
-  opacity: 0.8;
-}
-
-/* Subtle shimmer overlay - more refined */
-.profile-image::after {
   content: '';
   position: absolute;
   top: -50%;
@@ -97,72 +76,96 @@ header {
   background: linear-gradient(
     45deg,
     transparent,
-    rgba(255, 255, 255, 0.2),
     rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.4),
     transparent
   );
   transform: rotate(45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.profile-image::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    135deg,
+    transparent,
+    rgba(102, 126, 234, 0.3),
+    rgba(118, 75, 162, 0.3),
+    transparent
+  );
+  transform: rotate(135deg);
   transition: all 0.8s ease;
   opacity: 0;
 }
 
-/* HOVER STATE: More subtle and professional */
+/* HOVER STATE: Show more of body and face together */
 .profile-image:hover {
-  transform: scale(1.05) rotate(0.5deg);
+  transform: scale(1.15) rotate(3deg);
   
-  /* Very gentle shape change */
-  border-radius: 50% 50% 52% 48% / 48% 52% 50% 50%;
-  
-  /* Hover state: Better framing */
-  background-size: 160%;
+  /* Hover state: Zoom out to show more of the body while keeping face visible */
+  background-size: 120%;
   background-position: center 35%;
   
-  /* Professional hover glow */
+  /* Enhanced glow effects */
   box-shadow: 
-    0 0 40px rgba(102, 126, 234, 0.5),
-    0 0 80px rgba(102, 126, 234, 0.25),
-    inset 0 3px 0 rgba(255, 255, 255, 0.15),
-    0 12px 35px rgba(0, 0, 0, 0.18);
+    0 0 50px rgba(102, 126, 234, 0.6),
+    0 0 100px rgba(102, 126, 234, 0.3),
+    0 0 150px rgba(118, 75, 162, 0.2),
+    inset 0 3px 0 rgba(255, 255, 255, 0.2),
+    0 12px 35px rgba(0, 0, 0, 0.15);
     
   border-color: #764ba2;
 }
 
-/* Remove overly complex animations and keep it professional */
-.profile-image:hover::after {
+.profile-image:hover::before {
   opacity: 1;
-  animation: gentle-shimmer 1.5s ease-in-out;
+  animation: circular-shimmer 1.5s ease-in-out infinite;
 }
 
-/* Simplified animations */
-@keyframes gentle-shimmer {
+.profile-image:hover::after {
+  opacity: 1;
+  animation: circular-color-wave 2s ease-in-out infinite reverse;
+}
+
+/* Shimmer animation optimized for circular shape */
+@keyframes circular-shimmer {
   0% {
-    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    transform: translateX(-150%) translateY(-150%) rotate(45deg);
     opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
   }
   50% {
     opacity: 1;
   }
+  80% {
+    opacity: 0.8;
+  }
   100% {
-    transform: translateX(100%) translateY(100%) rotate(45deg);
+    transform: translateX(150%) translateY(150%) rotate(45deg);
     opacity: 0;
   }
 }
 
-/* Remove the floating animation - too distracting for academic site */
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .profile-image {
-    width: 150px;
-    height: 150px;
+@keyframes circular-color-wave {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(135deg);
+    opacity: 0;
   }
-}
-
-@media (max-width: 480px) {
-  .profile-image {
-    width: 130px;
-    height: 130px;
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(135deg);
+    opacity: 0;
   }
 }
 
