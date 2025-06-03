@@ -45,9 +45,9 @@ header {
   background-image: url('profile.jpg');
   background-repeat: no-repeat;
   
-  /* Normal state: Focus on face - zoomed in and positioned to show face clearly */
-  background-size: 130%;
-  background-position: center 60%;
+  /* Normal state: Focus on face and head with upper body */
+  background-size: 180%;
+  background-position: center 25%;
   
   border: 3px solid #667eea;
   flex-shrink: 0;
@@ -64,53 +64,13 @@ header {
   overflow: hidden;
 }
 
-/* Multiple shimmer layers for shine effects */
-.profile-image::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.6),
-    rgba(255, 255, 255, 0.4),
-    transparent
-  );
-  transform: rotate(45deg);
-  transition: all 0.6s ease;
-  opacity: 0;
-}
-
-.profile-image::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    135deg,
-    transparent,
-    rgba(102, 126, 234, 0.3),
-    rgba(118, 75, 162, 0.3),
-    transparent
-  );
-  transform: rotate(135deg);
-  transition: all 0.8s ease;
-  opacity: 0;
-}
-
-/* HOVER STATE: Show more of body and face together */
+/* HOVER STATE: Show the full body */
 .profile-image:hover {
   transform: scale(1.15) rotate(3deg);
   
-  /* Hover state: Zoom out to show more of the body while keeping face visible */
-  background-size: 120%;
-  background-position: center 35%;
+  /* Hover state: Zoom out significantly to show the full body */
+  background-size: 100%;
+  background-position: center center;
   
   /* Enhanced glow effects */
   box-shadow: 
@@ -122,52 +82,6 @@ header {
     
   border-color: #764ba2;
 }
-
-.profile-image:hover::before {
-  opacity: 1;
-  animation: circular-shimmer 1.5s ease-in-out infinite;
-}
-
-.profile-image:hover::after {
-  opacity: 1;
-  animation: circular-color-wave 2s ease-in-out infinite reverse;
-}
-
-/* Shimmer animation optimized for circular shape */
-@keyframes circular-shimmer {
-  0% {
-    transform: translateX(-150%) translateY(-150%) rotate(45deg);
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateX(150%) translateY(150%) rotate(45deg);
-    opacity: 0;
-  }
-}
-
-@keyframes circular-color-wave {
-  0% {
-    transform: translateX(-100%) translateY(-100%) rotate(135deg);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateX(100%) translateY(100%) rotate(135deg);
-    opacity: 0;
-  }
-}
-
 
 
 
