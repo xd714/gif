@@ -106,7 +106,7 @@ header {
 
 /* HOVER STATE: Show the full body */
 .profile-image:hover {
-  transform: scale(1.1) rotate(3deg); 
+  transform: scale(1.15) rotate(3deg); 
   /* Hover state: Zoom out significantly to show the full body */
   background-size: 100%;
   background-position: center center;
