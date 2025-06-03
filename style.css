@@ -45,7 +45,7 @@ header {
   background-repeat: no-repeat;
   
   /* Normal state: Focus on face and head with upper body */
-  background-size: 150%;
+  background-size: 130%;
   /*background-position: center 40%;*/
   background-position: 5% 50%;
   
@@ -106,7 +106,7 @@ header {
 
 /* HOVER STATE: Show the full body */
 .profile-image:hover {
-  transform: scale(1.2) rotate(3deg); 
+  transform: scale(1.1) rotate(3deg); 
   /* Hover state: Zoom out significantly to show the full body */
   background-size: 100%;
   background-position: center center;
