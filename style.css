@@ -34,16 +34,6 @@ header {
   margin-bottom: 2rem;
 }
 
-#.profile-image {
-#  width: 120px;
-#  height: 120px;
-#  border-radius: 50%;
-#  background-image: url('profile.jpg');
-#  background-size: cover;
-#  background-position: center;
-#  border: 3px solid #e9ecef;
-#  flex-shrink: 0;
-#}
 
 .profile-image {
   width: 180px;
