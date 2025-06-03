@@ -36,12 +36,14 @@ header {
 
 
 
+/* Replace your current .profile-image CSS with this enhanced version: */
+
 .profile-image {
   width: 200px;
   height: 200px;
   background-image: url('profile.jpg');
-  background-size: cover;
-  background-position: center;
+  background-size: 120%; /* Zoom in to crop out victory sign */
+  background-position: center 20%; /* Focus on face area, avoid hand */
   border: 4px solid #667eea;
   flex-shrink: 0;
   
@@ -50,16 +52,17 @@ header {
   
   /* Enhanced visual effects */
   box-shadow: 
-    0 0 30px rgba(102, 126, 234, 0.3),
-    0 0 60px rgba(102, 126, 234, 0.1),
-    inset 0 2px 0 rgba(255, 255, 255, 0.1);
+    0 0 40px rgba(102, 126, 234, 0.4),
+    0 0 80px rgba(102, 126, 234, 0.2),
+    inset 0 3px 0 rgba(255, 255, 255, 0.15),
+    0 10px 30px rgba(0, 0, 0, 0.1);
   
-  transition: all 0.4s ease;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
 }
 
-/* Add shimmer effect */
+/* Multiple shimmer layers for more shine */
 .profile-image::before {
   content: '';
   position: absolute;
@@ -70,7 +73,9 @@ header {
   background: linear-gradient(
     45deg,
     transparent,
-    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.4),
     transparent
   );
   transform: rotate(45deg);
@@ -78,37 +83,122 @@ header {
   opacity: 0;
 }
 
-/* Hover effects */
+.profile-image::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    135deg,
+    transparent,
+    rgba(102, 126, 234, 0.3),
+    rgba(118, 75, 162, 0.3),
+    transparent
+  );
+  transform: rotate(135deg);
+  transition: all 0.8s ease;
+  opacity: 0;
+}
+
+/* MUCH MORE OBVIOUS hover effects */
 .profile-image:hover {
-  transform: scale(1.08) rotate(3deg);
-  clip-path: polygon(15% 5%, 85% 15%, 95% 35%, 85% 95%, 55% 95%, 15% 85%, 5% 45%, 15% 15%);
+  transform: scale(1.15) rotate(5deg); /* Bigger scale and rotation */
+  clip-path: polygon(10% 0%, 90% 5%, 100% 30%, 95% 100%, 50% 95%, 5% 90%, 0% 40%, 5% 5%);
+  
+  /* SUPER SHINY glow effects */
   box-shadow: 
-    0 0 40px rgba(102, 126, 234, 0.5),
-    0 0 80px rgba(102, 126, 234, 0.2),
-    inset 0 3px 0 rgba(255, 255, 255, 0.2),
-    0 15px 35px rgba(0, 0, 0, 0.1);
+    0 0 60px rgba(102, 126, 234, 0.8),
+    0 0 120px rgba(102, 126, 234, 0.4),
+    0 0 180px rgba(118, 75, 162, 0.3),
+    inset 0 5px 0 rgba(255, 255, 255, 0.3),
+    0 20px 50px rgba(0, 0, 0, 0.2);
+    
   border-color: #764ba2;
+  background-size: 130%; /* Zoom in more on hover */
+  background-position: center 15%; /* Adjust position on hover */
 }
 
 .profile-image:hover::before {
   opacity: 1;
-  animation: shimmer 2s ease-in-out infinite;
+  animation: super-shimmer 1.5s ease-in-out infinite;
 }
 
-/* Shimmer animation */
-@keyframes shimmer {
+.profile-image:hover::after {
+  opacity: 1;
+  animation: color-wave 2s ease-in-out infinite reverse;
+}
+
+/* Super obvious shimmer animation */
+@keyframes super-shimmer {
   0% {
-    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    transform: translateX(-150%) translateY(-150%) rotate(45deg);
     opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
   }
   50% {
     opacity: 1;
   }
+  80% {
+    opacity: 0.8;
+  }
   100% {
-    transform: translateX(100%) translateY(100%) rotate(45deg);
+    transform: translateX(150%) translateY(150%) rotate(45deg);
     opacity: 0;
   }
 }
+
+/* Color wave animation */
+@keyframes color-wave {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(135deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(135deg);
+    opacity: 0;
+  }
+}
+
+/* Alternative cropping options - try these if the above doesn't work well: */
+
+/* Option 1: Focus more on center-left if victory sign is on right */
+/*
+.profile-image {
+  background-position: 30% 20%;
+}
+.profile-image:hover {
+  background-position: 25% 15%;
+}
+*/
+
+/* Option 2: Focus more on center-right if victory sign is on left */
+/*
+.profile-image {
+  background-position: 70% 20%;
+}
+.profile-image:hover {
+  background-position: 75% 15%;
+}
+*/
+
+/* Option 3: Zoom in even more to crop victory sign */
+/*
+.profile-image {
+  background-size: 150%;
+  background-position: center 10%;
+}
+.profile-image:hover {
+  background-size: 160%;
+  background-position: center 5%;
+}
+*/
 
 
 
