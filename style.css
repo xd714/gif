@@ -43,10 +43,11 @@ header {
   height: 120px;
   border-radius: 50%;
   background-image: url('profile.jpg');
+  background-repeat: no-repeat;
   
-  /* Normal state: Show complete face - no cropping */
-  background-size: 90%;
-  background-position: center center;
+  /* Normal state: Focus on face - zoomed in and positioned to show face clearly */
+  background-size: 160%;
+  background-position: center 30%;
   
   border: 3px solid #667eea;
   flex-shrink: 0;
@@ -103,13 +104,13 @@ header {
   opacity: 0;
 }
 
-/* HOVER STATE: Enhanced effects with dramatic transformation */
+/* HOVER STATE: Show more of body and face together */
 .profile-image:hover {
   transform: scale(1.15) rotate(3deg);
   
-  /* Hover state: Keep showing full face but with enhanced zoom */
-  background-size: 100%;
-  background-position: center center;
+  /* Hover state: Zoom out to show more of the body while keeping face visible */
+  background-size: 120%;
+  background-position: center 35%;
   
   /* Enhanced glow effects */
   box-shadow: 
@@ -167,35 +168,31 @@ header {
   }
 }
 
-/* Alternative options if you want to fine-tune the positioning: */
+/* Fine-tuning options - uncomment and adjust if needed: */
 
-/* Option A: If you want to focus slightly more on upper face */
+/* Option A: If you want to focus even more on the face in normal state */
 /*
 .profile-image {
-  background-position: center 40%;
-}
-.profile-image:hover {
-  background-position: center 40%;
+  background-size: 180%;
+  background-position: center 25%;
 }
 */
 
-/* Option B: If you want to focus slightly more on lower face */
+/* Option B: If you want to show more body in hover state */
 /*
-.profile-image {
-  background-position: center 60%;
-}
-.profile-image:hover {
-  background-position: center 60%;
-}
-*/
-
-/* Option C: If the image is still slightly cropped, use this to show more */
-/*
-.profile-image {
-  background-size: 90%;
-}
 .profile-image:hover {
   background-size: 100%;
+  background-position: center 40%;
+}
+*/
+
+/* Option C: If the face is cut off at the top, adjust the position */
+/*
+.profile-image {
+  background-position: center 20%;
+}
+.profile-image:hover {
+  background-position: center 30%;
 }
 */
 
