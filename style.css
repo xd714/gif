@@ -36,8 +36,6 @@ header {
 
 
 
-/* Replace your current .profile-image CSS with this enhanced version: */
-
 .profile-image {
   width: 200px;
   height: 200px;
@@ -104,10 +102,9 @@ header {
 
 /* MUCH MORE OBVIOUS hover effects */
 .profile-image:hover {
-  transform: scale(1.15) rotate(5deg); /* Bigger scale and rotation */
+  transform: scale(1.15) rotate(5deg);
   clip-path: polygon(10% 0%, 90% 5%, 100% 30%, 95% 100%, 50% 95%, 5% 90%, 0% 40%, 5% 5%);
   
-  /* SUPER SHINY glow effects */
   box-shadow: 
     0 0 60px rgba(102, 126, 234, 0.8),
     0 0 120px rgba(102, 126, 234, 0.4),
@@ -116,8 +113,8 @@ header {
     0 20px 50px rgba(0, 0, 0, 0.2);
     
   border-color: #764ba2;
-  background-size: 130%; /* Zoom in more on hover */
-  background-position: center 15%; /* Adjust position on hover */
+  background-size: 130%;
+  background-position: center 15%;
 }
 
 .profile-image:hover::before {
@@ -130,7 +127,6 @@ header {
   animation: color-wave 2s ease-in-out infinite reverse;
 }
 
-/* Super obvious shimmer animation */
 @keyframes super-shimmer {
   0% {
     transform: translateX(-150%) translateY(-150%) rotate(45deg);
@@ -151,7 +147,6 @@ header {
   }
 }
 
-/* Color wave animation */
 @keyframes color-wave {
   0% {
     transform: translateX(-100%) translateY(-100%) rotate(135deg);
@@ -165,40 +160,6 @@ header {
     opacity: 0;
   }
 }
-
-/* Alternative cropping options - try these if the above doesn't work well: */
-
-/* Option 1: Focus more on center-left if victory sign is on right */
-/*
-.profile-image {
-  background-position: 30% 20%;
-}
-.profile-image:hover {
-  background-position: 25% 15%;
-}
-*/
-
-/* Option 2: Focus more on center-right if victory sign is on left */
-/*
-.profile-image {
-  background-position: 70% 20%;
-}
-.profile-image:hover {
-  background-position: 75% 15%;
-}
-*/
-
-/* Option 3: Zoom in even more to crop victory sign */
-/*
-.profile-image {
-  background-size: 150%;
-  background-position: center 10%;
-}
-.profile-image:hover {
-  background-size: 160%;
-  background-position: center 5%;
-}
-*/
 
 
 
