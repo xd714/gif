@@ -34,15 +34,34 @@ header {
   margin-bottom: 2rem;
 }
 
+#.profile-image {
+#  width: 120px;
+#  height: 120px;
+#  border-radius: 50%;
+#  background-image: url('profile.jpg');
+#  background-size: cover;
+#  background-position: center;
+#  border: 3px solid #e9ecef;
+#  flex-shrink: 0;
+#}
+
 .profile-image {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 180px;
+  height: 180px;
   background-image: url('profile.jpg');
   background-size: cover;
   background-position: center;
   border: 3px solid #e9ecef;
   flex-shrink: 0;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2);
+}
+
+.profile-image:hover {
+  transform: scale(1.05) rotate(2deg);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
+  box-shadow: 0 12px 48px rgba(102, 126, 234, 0.3);
 }
 
 .profile-info h1 {
