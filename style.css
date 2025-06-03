@@ -46,7 +46,7 @@ header {
   
   /* Normal state: Focus on left side of body, opposite from victory sign */
   background-size: 130%; /* Slight zoom to focus on body area */
-  background-position: 60% 45%; /* Move RIGHT in the photo to show LEFT side of your body */
+  background-position: 80% 50%; /* Move RIGHT in the photo to show LEFT side of your body */
   
   border: 3px solid #667eea;
   flex-shrink: 0;
