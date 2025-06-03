@@ -47,7 +47,7 @@ header {
   
   /* Normal state: Focus on face - zoomed in and positioned to show face clearly */
   background-size: 180%;
-  background-position: center 25%;
+  background-position: center 20%;
   
   border: 3px solid #667eea;
   flex-shrink: 0;
@@ -110,8 +110,7 @@ header {
   
   /* Hover state: Zoom out to show more of the body while keeping face visible */
   background-size: 120%;
-  background-position: center 35%;
-  
+  background-position: center 30%;
   /* Enhanced glow effects */
   box-shadow: 
     0 0 50px rgba(102, 126, 234, 0.6),
