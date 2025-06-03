@@ -37,7 +37,6 @@ header {
 
 
 
-
 .profile-image {
   width: 120px;
   height: 120px;
@@ -64,6 +63,46 @@ header {
   overflow: hidden;
 }
 
+/* Multiple shimmer layers for shine effects */
+.profile-image::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.profile-image::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    135deg,
+    transparent,
+    rgba(102, 126, 234, 0.3),
+    rgba(118, 75, 162, 0.3),
+    transparent
+  );
+  transform: rotate(135deg);
+  transition: all 0.8s ease;
+  opacity: 0;
+}
+
 /* HOVER STATE: Show the full body */
 .profile-image:hover {
   transform: scale(1.15) rotate(3deg);
@@ -83,6 +122,15 @@ header {
   border-color: #764ba2;
 }
 
+.profile-image:hover::before {
+  opacity: 1;
+  animation: circular-shimmer 1.5s ease-in-out infinite;
+}
+
+.profile-image:hover::after {
+  opacity: 1;
+  animation: circular-color-wave 2s ease-in-out infinite reverse;
+}
 
 
 
