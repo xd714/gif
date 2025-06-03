@@ -46,8 +46,8 @@ header {
   background-repeat: no-repeat;
   
   /* Normal state: Focus on face - zoomed in and positioned to show face clearly */
-  background-size: 160%;
-  background-position: center 30%;
+  background-size: 180%;
+  background-position: center 25%;
   
   border: 3px solid #667eea;
   flex-shrink: 0;
