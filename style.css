@@ -39,14 +39,14 @@ header {
 
 
 .profile-image {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   background-image: url('profile.jpg');
   background-repeat: no-repeat;
   
   /* Normal state: Focus on face - zoomed in and positioned to show face clearly */
-  background-size: 160%;
+  background-size: 180%;
   background-position: center 50%;
   
   border: 3px solid #667eea;
