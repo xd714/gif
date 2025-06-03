@@ -37,17 +37,17 @@ header {
 
 
 
-/* Replace your .profile-image CSS with this updated version: */
 
 .profile-image {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   background-image: url('profile.jpg');
+  background-repeat: no-repeat;
   
-  /* Normal state: Show complete face - no cropping */
-  background-size: cover;
-  background-position: center center;
+  /* Normal state: Focus on face - zoomed in and positioned to show face clearly */
+  background-size: 160%;
+  background-position: center 50%;
   
   border: 3px solid #667eea;
   flex-shrink: 0;
@@ -104,13 +104,13 @@ header {
   opacity: 0;
 }
 
-/* HOVER STATE: Enhanced effects with dramatic transformation */
+/* HOVER STATE: Show more of body and face together */
 .profile-image:hover {
   transform: scale(1.15) rotate(3deg);
   
-  /* Hover state: Keep showing full face but with enhanced zoom */
-  background-size: 110%;
-  background-position: center center;
+  /* Hover state: Zoom out to show more of the body while keeping face visible */
+  background-size: 120%;
+  background-position: center 35%;
   
   /* Enhanced glow effects */
   box-shadow: 
@@ -167,8 +167,6 @@ header {
     opacity: 0;
   }
 }
-
-/* Alternative options if you want to fine-tune the positioning: */
 
 
 
