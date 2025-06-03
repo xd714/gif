@@ -47,7 +47,7 @@ header {
   /* Normal state: Focus on face and head with upper body */
   background-size: 180%;
   /*background-position: center 40%;*/
-  background-position: 20% 60%;
+  background-position: 10% 50%;
   
   border: 3px solid #667eea;
   flex-shrink: 0;
