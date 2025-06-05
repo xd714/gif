@@ -1,0 +1,170 @@
+/* subjest index.html */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[SUBJECT_TITLE] - Xi DING</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="[SUBJECT_DESCRIPTION] research, tutorials, and exercises by Xi DING">
+  <meta name="keywords" content="[KEYWORDS]">
+  <meta name="author" content="Xi DING">
+  
+  <link rel="canonical" href="https://xd714.github.io/xiding/research/[SUBJECT_FOLDER]/">
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="profile-section">
+        <div class="profile-image"></div>
+        <div class="profile-info">
+          <h1>Xi DING <span class="chinese-name">丁曦</span></h1>
+          <div class="title">PhD Candidate in Computational Animal Breeding & Genetics</div>
+          <div class="institution">Leibniz Institute for Farm Animal Biology (FBN), Germany</div>
+          <div class="email">
+            <a href="mailto:dingx714@outlook.com">dingx714@outlook.com</a>
+            <a href="mailto:ding@fbn-dummerstorf.de">ding@fbn-dummerstorf.de</a>
+          </div>
+        </div>
+      </div>
+      
+      <nav>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../research.html">Research</a></li>
+          <li><a href="../../publications.html">Publications</a></li>
+          <li><a href="../../cv.html">CV</a></li>
+          <li><a href="../../about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb">
+        <a href="../../research.html">Research</a> > <span>[SUBJECT_TITLE]</span>
+      </nav>
+
+      <section class="section">
+        <h2>[SUBJECT_TITLE]</h2>
+        <div class="research-card">
+          <p>[SUBJECT_OVERVIEW_PARAGRAPH]</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Contents</h2>
+        <div class="research-areas">
+          <div class="research-card">
+            <h3>[SECTION_1_TITLE]</h3>
+            <p>[SECTION_1_DESCRIPTION]</p>
+            <a href="[SECTION_1_FILE].html" class="btn">Learn More</a>
+          </div>
+
+          <div class="research-card">
+            <h3>[SECTION_2_TITLE]</h3>
+            <p>[SECTION_2_DESCRIPTION]</p>
+            <a href="[SECTION_2_FILE].html" class="btn">Learn More</a>
+          </div>
+
+          <div class="research-card">
+            <h3>[SECTION_3_TITLE]</h3>
+            <p>[SECTION_3_DESCRIPTION]</p>
+            <a href="[SECTION_3_FILE].html" class="btn">Learn More</a>
+          </div>
+
+          <div class="research-card">
+            <h3>[SECTION_4_TITLE]</h3>
+            <p>[SECTION_4_DESCRIPTION]</p>
+            <a href="[SECTION_4_FILE].html" class="btn">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Key Concepts</h2>
+        <div class="research-card">
+          <ul>
+            <li><strong>[CONCEPT_1]:</strong> [CONCEPT_1_DESCRIPTION]</li>
+            <li><strong>[CONCEPT_2]:</strong> [CONCEPT_2_DESCRIPTION]</li>
+            <li><strong>[CONCEPT_3]:</strong> [CONCEPT_3_DESCRIPTION]</li>
+            <li><strong>[CONCEPT_4]:</strong> [CONCEPT_4_DESCRIPTION]</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Optional: Related Publications Section -->
+      <section class="section">
+        <h2>Related Publications</h2>
+        <div class="research-card">
+          <h3>[PUBLICATION_TITLE]</h3>
+          <p><strong>[AUTHORS]</strong></p>
+          <p><em>[JOURNAL]</em>, [YEAR]</p>
+          <p>[PUBLICATION_DESCRIPTION]</p>
+          <a href="[PUBLICATION_URL]" target="_blank" class="btn">Read Paper</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../../research.html">Back to Research</a></li>
+            <li><a href="../../publications.html">Publications</a></li>
+            <li><a href="../../cv.html">CV</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>This Section</h4>
+          <ul>
+            <li><a href="[SECTION_1_FILE].html">[SECTION_1_TITLE]</a></li>
+            <li><a href="[SECTION_2_FILE].html">[SECTION_2_TITLE]</a></li>
+            <li><a href="[SECTION_3_FILE].html">[SECTION_3_TITLE]</a></li>
+            <li><a href="[SECTION_4_FILE].html">[SECTION_4_TITLE]</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <p>&copy; 2025 Xi DING. All rights reserved.</p>
+          <p>Last updated: [UPDATE_DATE]</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <style>
+    /* Breadcrumb navigation */
+    .breadcrumb {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background: var(--light-gray);
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+
+    .breadcrumb a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--accent-hover);
+    }
+
+    .breadcrumb span {
+      color: var(--dark-gray);
+      font-weight: 500;
+    }
+
+    /* Ensure profile image works with relative path */
+    .profile-image {
+      background-image: url('../../profile.jpg');
+    }
+  </style>
+</body>
+</html>
